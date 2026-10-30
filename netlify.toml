@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--no-audit --no-fund"
+
+# Netlify's official Next.js runtime (also auto-detected; listed so it is explicit)
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
